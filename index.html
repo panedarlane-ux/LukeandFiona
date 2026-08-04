@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
 <style>
+  body{ overflow-x:hidden; }
   :root{
     --ivory:#FAF5EC;
     --ivory-deep:#F1E9DA;
@@ -186,13 +187,14 @@
   }
   .hero-sub{
     font-family:'Tenor Sans', sans-serif;
-    font-size:14px;
-    letter-spacing:0.25em;
+    font-size:clamp(7px, 2.3vw, 14px);
+    letter-spacing:0.12em;
     text-transform:uppercase;
+    white-space:nowrap;
     opacity:0;
     animation: fadeUp 1.1s ease forwards 0.6s;
   }
-  .hero-sub .dot{ color:var(--gold-soft); margin:0 10px; }
+  .hero-sub .dot{ color:var(--gold-soft); margin:0 clamp(4px, 1.6vw, 10px); }
 
   @keyframes fadeUp{
     from{ opacity:0; transform:translateY(16px); }
@@ -588,11 +590,12 @@
   }
   footer p{
     font-family:'Tenor Sans', sans-serif;
-    font-size:11px;
-    letter-spacing:0.2em;
+    font-size:clamp(7px, 2.1vw, 11px);
+    letter-spacing:0.12em;
     text-transform:uppercase;
     color:#8a8175;
     margin-top:14px;
+    white-space:nowrap;
   }
 
   .accom-note{
@@ -676,7 +679,7 @@
   <div class="hero-veil"></div>
   <div class="hero-eyebrow eyebrow">Together with their families</div>
   <h1 class="hero-names">Fiona <span class="amp">&amp;</span> Luke</h1>
-  <div class="hero-sub">Wedding Party &mdash; Sunday 9th<span class="dot">•</span>Ceremony &mdash; Monday 10th August 2027</div>
+  <div class="hero-sub">Party &mdash; Mon 9th<span class="dot">•</span>Ceremony &mdash; Tue 10th Aug 2027</div>
   <button class="scroll-cue" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})"><span>Scroll</span><span class="line"></span></button>
 </section>
 
@@ -730,7 +733,7 @@
     <h2><span style="text-decoration:underline;">Accommodation</span></h2>
   </div>
   <div class="accom-note reveal">
-    <p>We would love for you to stay onsite with us for the party the night before on Sunday 9th August and the wedding on the Monday 10th August.</p>
+    <p>We would love for you to stay onsite with us for the party the night before on Monday 9th August and the wedding on the Tuesday 10th August.</p>
     <p>The accommodation is on site. Per room is &pound;104 for 2 nights (sleeps 2 people per room with doubles or two single beds with an ensuite).</p>
     <div class="radio-row" style="justify-content:center; margin-top:26px;">
       <label><input type="radio" name="accom-choice" value="yes" checked> Yes &mdash; please book us in (&pound;104)</label>
@@ -804,7 +807,7 @@
 </section>
 <footer>
   <div class="amp-mark">F &amp; L</div>
-  <p>Party Sun 9th &amp; Ceremony Mon 10th August 2027 &nbsp;&middot;&nbsp; Ilfracombe, Devon</p>
+  <p>Party Mon 9th &amp; Ceremony Tue 10th Aug 2027 &nbsp;&middot;&nbsp; Ilfracombe, Devon</p>
 </footer>
 
 <script>
