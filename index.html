@@ -1149,20 +1149,6 @@
 
     <p class="accom-footnote" style="margin-top:18px;">* Food will also be organised for the party on Monday evening.</p>
 
-    <div class="radio-row" style="justify-content:center; margin-top:30px;">
-      <label><input type="radio" name="accom-choice" value="yes" checked> Yes &mdash; please book us in (&pound;328)</label>
-      <label><input type="radio" name="accom-choice" value="no"> No &mdash; arranging my own</label>
-    </div>
-
-    <div class="field" style="max-width:320px; margin:20px auto 0;">
-      <label for="room-type">Preferred Room Type</label>
-      <select id="room-type" name="room-type">
-        <option value="double">Double</option>
-        <option value="twin">Twin (two single beds)</option>
-        <option value="accessible">Accessible</option>
-      </select>
-    </div>
-
     <p class="accom-footnote">Rooms are limited, so please tell us on the RSVP form if you&rsquo;d like one, along with the room type you&rsquo;d prefer (double, twin, or accessible). We can&rsquo;t promise a specific room, but we&rsquo;ll do our best to match preferences. We&rsquo;ll ask for payment by bank transfer once all rooms are allocated.</p>
 
     <p class="accom-footnote">If you would like to see the accommodation, please take a look at the venue&rsquo;s website: <a href="https://www.tunnelsbeaches.co.uk/accommodation" target="_blank" rel="noopener">tunnelsbeaches.co.uk/accommodation</a></p>
@@ -1195,17 +1181,32 @@
       <div class="field">
         <label>Will you be attending?</label>
         <div class="radio-row">
-          <label><input type="radio" name="attending" value="yes" checked> Joyfully accepts</label>
-          <label><input type="radio" name="attending" value="no"> Regretfully declines</label>
+          <label><input type="radio" name="attending" value="yes" checked required> Joyfully accepts</label>
+          <label><input type="radio" name="attending" value="no" required> Regretfully declines</label>
         </div>
       </div>
       <div class="field">
         <label for="guests">Number in Your Party</label>
-        <input type="number" id="guests" name="guests" min="1" max="6" value="1">
+        <input type="number" id="guests" name="guests" min="1" max="6" value="1" required>
+      </div>
+      <div class="field">
+        <label>Would you like us to book accommodation for you? (&pound;328 per room, both nights)</label>
+        <div class="radio-row">
+          <label><input type="radio" name="accom-choice" value="yes" checked required> Yes &mdash; please book us in</label>
+          <label><input type="radio" name="accom-choice" value="no" required> No &mdash; arranging my own</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="room-type">Preferred Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="double">Double</option>
+          <option value="twin">Twin (two single beds)</option>
+          <option value="accessible">Accessible</option>
+        </select>
       </div>
       <div class="field">
         <label for="notes">Dietary Restrictions / Notes</label>
-        <textarea id="notes" name="notes" placeholder="Let us know anything we should be aware of"></textarea>
+        <textarea id="notes" name="notes" placeholder="Let us know anything we should be aware of" required></textarea>
       </div>
       <button type="submit" class="submit-btn">Send RSVP</button>
       <p class="rsvp-note" id="rsvpNote">Thank you — your response has been recorded. We can't wait to celebrate with you.</p>
