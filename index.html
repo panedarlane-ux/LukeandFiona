@@ -1269,9 +1269,23 @@
 
   document.getElementById('rsvpForm').addEventListener('submit', function(e){
     e.preventDefault();
-    document.getElementById('rsvpNote').classList.add('show');
-    this.querySelector('.submit-btn').textContent = 'Sent';
-    this.querySelector('.submit-btn').disabled = true;
+    const form = this;
+    const data = new FormData(form);
+    fetch('https://formspree.io/f/mkjwobqe', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if (response.ok) {
+        document.getElementById('rsvpNote').classList.add('show');
+        form.querySelector('.submit-btn').textContent = 'Sent';
+        form.querySelector('.submit-btn').disabled = true;
+      } else {
+        alert('Something went wrong sending your RSVP — please try again.');
+      }
+    }).catch(function(){
+      alert('Something went wrong sending your RSVP — please try again.');
+    });
   });
 
   const revealEls = document.querySelectorAll('.reveal, .t-item');
