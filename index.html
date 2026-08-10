@@ -659,6 +659,45 @@
   }
   img{ max-width:100%; }
 
+  .faq-wrap{
+    max-width:720px;
+    margin:0 auto;
+  }
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+  }
+  .faq-item:first-child{ border-top:1px solid var(--line); }
+  .faq-item summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:21px;
+    color:var(--ink);
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+    content:'+';
+    flex-shrink:0;
+    font-family:'Tenor Sans', sans-serif;
+    font-size:20px;
+    color:var(--gold-deep);
+    transition:transform 0.3s ease;
+  }
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item p{
+    margin:16px 0 0;
+    font-size:17px;
+    line-height:1.7;
+    color:#3a352f;
+    white-space:pre-line;
+  }
+
+
   .accom-lead{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
@@ -1213,6 +1252,61 @@
     </form>
   </section>
 </div>
+
+<section id="faq">
+  <div class="section-head reveal">
+    <div class="eyebrow">Good To Know</div>
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-wrap reveal">
+    <details class="faq-item">
+      <summary>Are children welcome?</summary>
+      <p>We regret to inform you that no children are invited to the wedding apart from immediate family members.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is the wedding in or outdoors?</summary>
+      <p>We aim to hold the ceremony outside &mdash; weather depending.
+The wedding breakfast will be inside.
+The venue has access to both in and outdoor space for the rest of the day &mdash; so don&rsquo;t worry about hunting for a shaded spot!</p>
+    </details>
+    <details class="faq-item">
+      <summary>Where can I park?</summary>
+      <p>For guests who have booked a room at the Tunnels &mdash; there is a parking space (one space per room. Please do not take more as our wedding vendors are also allocated a space).
+If you are not staying in the Tunnels accommodation, there are many car parks.
+The car parks have pay and display and many use RingGo &mdash; I recommend you download the free RingGo app to pay for parking, which allows you to top up hours from your app without having to walk back to your car!
+
+Car parks:
+Wilder Road Car Park, Wilder Rd, Ilfracombe EX34 8HE (6 minute walk from venue)
+Ropery Road Car Park, 10 Ropery Rd, EX34 9EF (10 minute walk from venue)
+Pier Car Park, 11 The Quay EX34 9EQ (14 minute walk from venue)
+National Trust Torrs Car Park: Located at Upper Torrs EX34 8BD (16 minute walk from venue)</p>
+    </details>
+    <details class="faq-item">
+      <summary>Will the bar at the wedding take cash?</summary>
+      <p>The bar is cashless so please bring your cards or use a digital wallet.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What if I have dietary requirements?</summary>
+      <p>If you have forgotten to add this to your RSVP &mdash; don&rsquo;t worry. Just inform Fiona or Luke ASAP!</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you have a gift list?</summary>
+      <p>We do not have a formal wedding list, but if you would like to get us a gift, we would appreciate a contribution towards our honeymoon!
+
+Here are the bank details:
+Fiona Lo
+04-00-05
+08372858</p>
+    </details>
+    <details class="faq-item">
+      <summary>As we are staying at the Tunnels and are ready to settle the balance, what is the best way to pay?</summary>
+      <p>Here are the bank details:
+Fiona Lo
+04-00-05
+08372858</p>
+    </details>
+  </div>
+</section>
 
 <section id="gallery">
   <div class="section-head reveal">
